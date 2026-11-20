@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reel Seek Bar for Instagram</title>
+  <meta name="description" content="Download the Reel Seek Bar for Instagram browser extension.">
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkelessMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(255, 77, 143, .28), transparent 28rem),
+        radial-gradient(circle at 85% 85%, rgba(106, 84, 255, .24), transparent 28rem),
+        #0d0d10;
+      color: #fff;
+    }
+    main {
+      width: min(680px, calc(100% - 32px));
+      text-align: center;
+      padding: 52px 32px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 24px;
+      background: rgba(18, 18, 22, .82);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, .35);
+      backdrop-filter: blur(16px);
+    }
+    .icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 20px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #ff4d8f, #774cff);
+      font-size: 34px;
+      box-shadow: 0 14px 40px rgba(119, 76, 255, .35);
+    }
+    h1 { margin: 0 0 12px; font-size: clamp(30px, 7vw, 48px); letter-spacing: -.04em; }
+    p { margin: 0 auto 28px; max-width: 520px; color: #bbbcc5; line-height: 1.65; }
+    .download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 12px;
+      background: #fff;
+      color: #111;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .download:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255, 255, 255, .16); }
+    .download:focus-visible { outline: 3px solid #ff87b3; outline-offset: 4px; }
+    .install { margin-top: 24px; font-size: 13px; color: #8f919b; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="icon" aria-hidden="true">&#9654;</div>
+    <h1>Reel Seek Bar</h1>
+    <p>Adds a draggable timeline, time labels and arrow-key shortcuts to Instagram videos and reels on desktop.</p>
+    <a class="download" href="./reel-seekbar.zip" download>
+      <span aria-hidden="true">&#11015;</span>
+      Download extension ZIP
+    </a>
+    <div class="install">Chrome, Edge, Brave and Firefox compatible</div>
+  </main>
+</body>
+</html>

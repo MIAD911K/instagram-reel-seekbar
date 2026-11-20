@@ -2,6 +2,10 @@
 
 Adds a timeline to Instagram videos/reels on desktop.
 
+## Download
+
+[Download the extension ZIP](https://github.com/MIAD911K/instagram-reel-seekbar/raw/refs/heads/main/reel-seekbar.zip)
+
 - Thin progress line at the bottom of the video; hover the video to expand it
 - Click or drag anywhere on the line to jump to that moment (hover shows the time)
 - Current time / total time labels
