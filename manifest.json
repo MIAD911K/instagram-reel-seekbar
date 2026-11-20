@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Reel Seek Bar for Instagram",
+  "version": "1.0.0",
+  "description": "Adds a draggable timeline, time labels and ←/→ skip keys to Instagram videos and reels on desktop.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": { "id": "reel-seekbar@miad.local" }
+  }
+}

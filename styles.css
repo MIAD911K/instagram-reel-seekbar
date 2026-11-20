@@ -1,0 +1,85 @@
+#rs-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2147483647;
+  height: 28px;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font: 600 11px/1 system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #fff;
+  pointer-events: none;
+  user-select: none;
+}
+#rs-bar.rs-show { display: flex; }
+
+#rs-bar .rs-time {
+  min-width: 32px;
+  opacity: 0;
+  transition: opacity .15s;
+  text-shadow: 0 0 4px #000, 0 0 2px #000;
+  pointer-events: none;
+}
+#rs-bar .rs-dur { text-align: right; }
+#rs-bar.rs-active .rs-time { opacity: 1; }
+
+#rs-bar .rs-track {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: none;
+}
+#rs-bar .rs-rail {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, .3);
+  border-radius: 3px;
+  transition: height .12s;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+}
+#rs-bar.rs-active .rs-rail,
+#rs-bar .rs-track:hover .rs-rail { height: 6px; }
+
+#rs-bar .rs-buf,
+#rs-bar .rs-fill {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  border-radius: 3px;
+  pointer-events: none;
+}
+#rs-bar .rs-buf  { background: rgba(255, 255, 255, .35); width: 0; }
+#rs-bar .rs-fill { background: #fff; width: 0; }
+
+#rs-bar .rs-thumb {
+  position: absolute;
+  top: 50%;
+  width: 13px; height: 13px;
+  margin: -6.5px 0 0 -6.5px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .6);
+  opacity: 0;
+  transition: opacity .12s;
+  pointer-events: none;
+}
+#rs-bar.rs-active .rs-thumb { opacity: 1; }
+
+#rs-bar .rs-tip {
+  position: absolute;
+  bottom: 14px;
+  transform: translateX(-50%);
+  padding: 3px 6px;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+#rs-bar .rs-track:hover .rs-tip { opacity: 1; }
